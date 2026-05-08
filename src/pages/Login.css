@@ -1,16 +1,19 @@
-
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
+
 /* FULL SCREEN */
 .container {
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center; /* center login */
+  justify-content: center;
+  /* center login */
   align-items: center;
   background-color: #b4d7ff;
   position: relative;
@@ -37,14 +40,16 @@ html, body, #root {
 
   transform: translateY(-50%) rotate(-10deg);
 }
+
 /* LOGIN BOX CENTER */
 .login-form {
-  width: 320px;
+  width: 500px;
+  height: 330px;
   padding: 30px;
-  background-color: #4a7ff7;
+  background-color: #76a0ff;
   border-radius: 13px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
@@ -52,6 +57,7 @@ html, body, #root {
 .title {
   color: white;
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 /* INPUTS */
@@ -72,7 +78,7 @@ html, body, #root {
 }
 
 .password-input {
-  width: 85%;
+  width: 95%;
   padding: 10px 40px 10px 10px;
   border-radius: 15px;
   border: none;
@@ -107,7 +113,13 @@ html, body, #root {
   padding: 10px;
   border: none;
   border-radius: 15px;
-  background-color: #1e1bae;
+
+  background: linear-gradient(
+      180deg,
+      #0951bd,
+      #051a4f
+      );
+
   color: white;
   font-weight: bold;
   cursor: pointer;

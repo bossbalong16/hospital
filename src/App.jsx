@@ -1,15 +1,20 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import "./App.css";
+import DochomePage from "./pages/doctors/DochomePage";
 
 function App() {
   return (
-    <div>
-      <Login />
+    <BrowserRouter>
+      <Routes>
 
-     <div className="container">
-      </div>
-    
-    </div>
+        {/* LOGIN PAGE */}
+        <Route path="/" element={<Login />} />
+
+        {/* DOCTOR HOME PAGE */}
+        <Route path="/doctor" element={<DochomePage />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

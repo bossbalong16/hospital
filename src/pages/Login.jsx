@@ -1,9 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import mainLogo from "../assets/icons/mainLogo.png";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // TODO: dito mo ilalagay validation later (database)
+    
+    navigate("/doctor"); // 🔥 redirect to doctor homepage
+  };
 
   return (
     <div className="container">
@@ -47,12 +56,12 @@ function Login() {
           <a href="#">Forgot password?</a>
         </div>
 
-        <button className="login-btn">Log in</button>
+        {/* 🔥 CONNECTED BUTTON */}
+        <button className="login-btn" onClick={handleLogin}>
+          Log in
+        </button>
 
-        <h6 className="signup">
-          or <a href="#">Sign up</a>
-        </h6>
-
+        
       </div>
     </div>
   );
